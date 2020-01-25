@@ -3,7 +3,7 @@ function is_username_valid(username){
     return regex.test(username);
 }
 function is_password_valid(password) {
-    const rgx = /^([\W&&0-9]+)([\s]){9}$/;
+    const rgx = /^(?=.*[a-z])(?=.*[0-9])(?=.*[\W|_]).{9}$/;
     return rgx.test(password);
 }
 console.log(is_username_valid("john.smith"));
