@@ -1,7 +1,19 @@
 <?php
-$string = "saya suka programming";
-foreach (count_chars($string, 1) as $i => $val)
+
+function hitung_karakter($string){
+    if (is_string($string)){
+$text = str_replace(' ', '', $string);
+foreach (count_chars($text, 1) as $i => $val)
 {
-   echo "Huruf \"" , chr($i) , "\" muncul $val kali.<br>";
+    if ($val != 1){
+   echo "Huruf \"" , chr($i) , "\" muncul $val kali.\n";
 }
+}
+}
+else{
+    echo "Harus memasukan karakter dan harus string!";
+}
+}
+
+hitung_karakter("cepat kerjakan!!!");
 ?>
